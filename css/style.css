@@ -1,0 +1,18 @@
+.logo {
+  width: 100px;
+  height: auto;
+  margin: 30px;
+  position: absolute;
+}
+
+.backgroundImg {
+  width: 100%;
+  height: auto;
+}
+
+nav li {
+  display: inline-block;
+  padding: 10px;
+  margin: 0 auto;
+  position: absolute;
+}
