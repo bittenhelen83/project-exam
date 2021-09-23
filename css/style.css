@@ -1,18 +1,93 @@
-.logo {
-  width: 100px;
-  height: auto;
-  margin: 30px;
-  position: absolute;
+/* Mauve #A1123A */
+
+@font-face {
+  font-family: "Orbitron", sans-serif;
 }
 
-.backgroundImg {
+.logo {
+  width: 80px;
+}
+
+nav {
+  float: right;
+  font-family: "Orbitron";
+}
+
+li {
+  display: inline;
+  padding: 5px;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: #a1123a;
+}
+.dailyImg {
   width: 100%;
   height: auto;
 }
 
-nav li {
-  display: inline-block;
+.dateContainer {
+  margin: auto;
+  font-family: "Orbitron";
+  text-align: center;
+}
+
+#contactForm {
+  color: #a1123a;
+  font-family: "Orbitron";
+}
+
+form {
+  width: 150px;
+  margin: auto;
+  padding: 50px;
+}
+.form-error {
+  display: none;
+  color: red;
+  font-size: 15px;
+  font-family: "Orbitron";
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.container {
+  padding-top: 30px;
+}
+
+.element {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  border-style: solid;
+}
+.thumbnail {
+  width: 300px;
+  border-radius: 50px;
+}
+.twitterFeed {
+  width: 300px;
+  float: right;
+  padding: 20px;
+}
+.linkContainer {
+  display: inline-flex;
+  flex-grow: 2;
+  flex-flow: column wrap;
   padding: 10px;
-  margin: 0 auto;
-  position: absolute;
+}
+.item {
+  padding: 10px;
+}
+.heading {
+  float: left;
 }

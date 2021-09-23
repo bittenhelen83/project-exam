@@ -1,4 +1,6 @@
-const backgroundImg = document.querySelector(".backgroundImg");
+const dailyImg = document.querySelector(".dailyImg");
+
+const dateContainer = document.querySelector(".dateContainer");
 
 const imgurl = "https://api.nasa.gov/planetary/apod?api_key=Hvz8pLYl5d6InG5cMoneJH4fAEpjgVDKLsdfPEqv"
 
@@ -10,16 +12,32 @@ async function getImg() {
 
     console.log(results);
 
-        console.log(results.url);
+    dailyImg.innerHTML = ""
 
-        backgroundImg.innerHTML += `<div>
-                                    <img src="${results.url}" class="backgroundImg" alt="daily image from NASA" />
+    if (`${results.media_type}` === "image"){
+
+        dateContainer.innerHTML +=  `<div>
                                     <p>${results.date}</p>
                                     </div>`
 
-        dateContainer.innerHTML +=  `<div>
-                                <p>${results.date}</p>
+        dailyImg.innerHTML += `<div>
+                                <img src="${results.url}" class="dailyImg" alt="daily image from NASA" />
                                 </div>`
-}
+    
+    }
+    else {
+        dateContainer.innerHTML +=  `<div>
+                                    <p>${results.date}</p>
+                                    </div>`
 
+        dailyImg.innerHTML += `<div>
+                            <video>
+                            <source src="${results.url}" type="video/mp4">
+                            </video>
+                            </div>`
+    
+    }
+}
+    
 getImg();
+
