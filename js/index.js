@@ -32,7 +32,7 @@ async function getImg() {
 
         dailyImg.innerHTML += `<div>
                             <video>
-                            <source src="${results.url}" type="video/mp4">
+                            <source src="${results.url}" type="video/">
                             </video>
                             </div>`
     
