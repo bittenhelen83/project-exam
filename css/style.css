@@ -18,6 +18,9 @@ li {
   padding: 5px;
 }
 
+p {
+  font-family: "Orbitron", sans-serif;
+}
 a:link {
   color: black;
 }
@@ -44,7 +47,6 @@ a:visited {
 form {
   width: 150px;
   margin: auto;
-  padding: 50px;
 }
 .form-error {
   display: none;
@@ -57,12 +59,28 @@ h1 {
   font-size: 20px;
 }
 
-.container {
-  padding-top: 30px;
+.twitterFeed {
+  width: 300px;
+  float: right;
+  padding: 20px;
+}
+
+.linkContainer {
+  display: inline-flex;
+  flex-grow: 2;
+  flex-flow: column wrap;
+  padding: 10px;
+}
+
+.item {
+  padding: 10px;
+}
+
+.heading {
+  float: left;
 }
 
 .element {
-  width: 300px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
@@ -70,24 +88,58 @@ h1 {
   border-radius: 50px;
   border-style: solid;
 }
-.thumbnail {
+
+h1 {
+  text-align: center;
+  font-family: "Orbitron";
+  padding-top: 20px;
+}
+
+nav .current {
+  color: black;
+}
+
+.element {
   width: 300px;
-  border-radius: 50px;
 }
-.twitterFeed {
-  width: 300px;
-  float: right;
-  padding: 20px;
+/* Media queries */
+@media only screen and (min-width: 280px) and (max-width: 767px) {
+  .element {
+    width: 200px;
+  }
+  .container {
+    padding-top: 100px;
+  }
+  .thumbnail {
+    width: 200px;
+    border-radius: 50px;
+  }
+
+  li {
+    display: inline-block;
+  }
+  .twitterFeed {
+    margin: auto;
+    width: 250px;
+  }
 }
-.linkContainer {
-  display: inline-flex;
-  flex-grow: 2;
-  flex-flow: column wrap;
-  padding: 10px;
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .container {
+    padding-top: 30px;
+  }
+
+  .thumbnail {
+    width: 300px;
+    border-radius: 50px;
+  }
 }
-.item {
-  padding: 10px;
+
+@media only screen and (min-width: 1200px) {
+  .thumbnail {
+    width: 300px;
+    border-radius: 50px;
+  }
 }
-.heading {
-  float: left;
-}
+
+/* Footer styles */
